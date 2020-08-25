@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://olamide123:olamide123@contactkeeper.dzdle.gcp.mongodb.net/ContactKeeper?retryWrites=true&w=majority"
+}
