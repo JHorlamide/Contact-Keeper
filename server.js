@@ -6,12 +6,16 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {
-  res.json({msg: 'Welcome to the ContactKeeper API...'});
+  res.json({ msg: 'Welcome to the ContactKeeper API...' });
 });
-/*** ConnectDB ***/ 
+
+/*** Initialize Middleware ***/
+app.use(express.json({ extended: false }));
+
+/*** Connect Database ***/
 connectDB();
 
-/*** Define Route ***/ 
+/*** Define Route ***/
 app.use('/api/auth', require('./Routes/auth'));
 app.use('/api/users', require('./Routes/users'));
 app.use('/api/contacts', require('./Routes/contacts'));
