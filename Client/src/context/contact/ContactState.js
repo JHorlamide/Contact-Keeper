@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
 import ContactContext from './contactContext.js';
-import ContactReducer from './contactReducer';
+import contactReducer from './contactReducer';
 import { v1 as uuid } from 'uuid';
 import {
   ADD_CONTACT,
@@ -41,7 +41,7 @@ const ContactState = (props) => {
     filtered: null,
   };
 
-  const [state, dispatch] = useReducer(ContactReducer, initialState);
+  const [state, dispatch] = useReducer(contactReducer, initialState);
 
   /*** Add Contact ***/
   const addContact = (contact) => {
